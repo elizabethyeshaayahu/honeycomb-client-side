@@ -1,0 +1,25 @@
+<mat-card class="col-ctr-ctr container" appearance="outlined">
+    <mat-card-header class="header">
+        <mat-card-title class="title">Send email to all verified users</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content class="content"> 
+        <div class="row-ctr form-container">
+            <form [formGroup]="emailForm" class="col form">
+                <div class="col email-subject">
+                    <label class="label" for="subject">Subject: </label>
+                    <input class="input" id="subject" type="text" formControlName="subject">
+                </div>
+                <div class="col email-body">
+                    <label class="label" for="body">Body: </label>
+                    <input class="input" id="body" type="text" formControlName="body">
+                </div>
+            </form>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="footer">
+        <button mat-button class="button">Send</button>
+      </mat-card-actions>
+    
+</mat-card>
