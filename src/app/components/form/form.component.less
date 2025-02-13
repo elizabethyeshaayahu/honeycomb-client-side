@@ -6,48 +6,66 @@
     .col-ctr-ctr();
 }
 
+.label{
+    word-break: break-word;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 .container{
-    height: 50%;
-    width: 20%;
+    width: 400px;
+    height: 600px;
     font-family: 'Rebond';
+    align-items: center;
+    justify-content: space-between;
 
     .header{
-        height: 10%;
+        width: 200px;
+        height: 60px;
         .title{
+            .label();
             color: #C14600;
+            text-align: center;
         }
     }
 
     .content{
-        height: 80%;
-        width: 100%;
+        width: inherit;
+        height: 480px;
 
         .form-container{
-            height: 100%;
+            width: inherit;
+            height: inherit;
             .form{
-                width: 80%;
-                height: 100%;
+                width: 380px;
+                height: inherit;
 
                 .email-subject{
-                    height: 30%;
+                    width: inherit;
+                    height: 50px;
                     margin-bottom: 10px;
                     .label{
-                        height: 20%;
+                        .label();
+                        width: inherit;
+                        height: 20px;
                     }
                     .input{
-                        height: 80%;
-                        // border-radius: 4px;
+                        width: inherit;
+                        height: 20px;
+                        border-radius: 4px;
                     }
                 }
 
                 .email-body{
-                    height: 70%;
+                    width: inherit;
+                    height: 400px;
                     .label{
-                        height: 8%;
+                        height: 20px;
+                        .label()
                     }
                     .input{
-                        height: 92%;
-                        // border-radius: 4px;
+                        height: 370px;
+                        border-radius: 4px;
                     }
                 }
             }
@@ -56,15 +74,95 @@
     }
 
     .footer{
-        height: 10%;
+        height: 40px;
 
         .button{
             cursor: pointer;
-            height: 70%;
+            height: inherit;
             border-radius: 4px;
             border: none;
             box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
         }
     }
     
+}
+
+@media screen and (max-width:500px){
+    .container{
+        width: 200px;
+        .header{
+            .title{
+                font-size: 1em;
+            }
+        }
+
+        .content{
+            width: 200px;
+
+            .form-container{
+                width: 200px;
+                .form{
+                    width: 380px;
+
+                    .email-subject{
+                        width: 200px;
+                        .label{
+                            width: 200px;
+                        }
+                        .input{
+                            width: 200px;
+                        }
+                    }
+
+                    .email-body{
+                        width: 200px;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media screen and (max-height:700px){
+    .container{
+        font-size: 10px;
+        height: 300px;
+        .header{
+            height: 30px;
+        }
+        .content{
+            height: 230px;
+            .form-container{
+                height: 230px;
+                    .form {
+                        height: 230px;
+                        .email-subject{
+                            height: 23px;
+                            .label{
+                                height: 7px;
+                            }
+                            .input{
+                                height: 7px;
+                            }
+                        }
+
+                        .email-body{
+                            height: 177px;
+                            .label{
+                                height: 7px;
+                            }
+                            .input{
+                                height: 160px;
+                        }
+                    }
+                }
+            }   
+        }
+        .footer{
+            height: 20px;
+            .button{
+                height: inherit;
+            }
+        }
+    }
 }

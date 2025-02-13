@@ -1,25 +1,25 @@
-<mat-card class="col-ctr-ctr container" appearance="outlined">
-    <mat-card-header class="header">
-        <mat-card-title class="title">Send email to all verified users</mat-card-title>
-      </mat-card-header>
+<mat-card class="col container" appearance="outlined">
+      <div class="header col-ctr">
+        <div class="title">Send email to all verified users</div>
+      </div>
 
-      <mat-card-content class="content"> 
+      <div class="content"> 
         <div class="row-ctr form-container">
             <form [formGroup]="emailForm" class="col form">
-                <div class="col email-subject">
+                <div class="col-btw email-subject">
                     <label class="label" for="subject">Subject: </label>
                     <input class="input" id="subject" type="text" formControlName="subject">
                 </div>
-                <div class="col email-body">
+                <div class="col-btw email-body">
                     <label class="label" for="body">Body: </label>
-                    <input class="input" id="body" type="text" formControlName="body">
+                    <textarea class="input" id="body" type="text" formControlName="body"></textarea>
                 </div>
             </form>
         </div>
-      </mat-card-content>
+      </div>
 
-      <mat-card-actions class="footer">
-        <button mat-button class="button">Send</button>
-      </mat-card-actions>
+      <div class="footer">
+        <button mat-button class="button" (click)="submit()">Send</button>
+      </div>
     
 </mat-card>
