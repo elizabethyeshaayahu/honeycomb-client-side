@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormModule } from './components/form/form.module';
+import { EmailService } from './services/email.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { FormModule } from './components/form/form.module';
     AppRoutingModule,
     FormModule
   ],
-  providers: [],
+  providers: [EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
