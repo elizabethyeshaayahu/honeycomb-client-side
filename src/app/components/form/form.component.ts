@@ -17,8 +17,10 @@ export class FormComponent {
     });
   }
 
-  submit(): void {
-    this.EmailService.sendEmailToVerifiedUsers(this.emailForm.get('subject')?.value.toString(),this.emailForm.get('body')?.value.toString());
+  async submit(){
+    await this.EmailService.sendEmailToVerifiedUsers
+    (this.emailForm.get('subject')?.value.toString(),
+    this.emailForm.get('body')?.value.toString());
   }
 
 }
